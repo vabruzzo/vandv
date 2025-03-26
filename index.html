@@ -76,6 +76,29 @@
         padding: 20px;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
       }
+      .vibrant-text {
+        background: linear-gradient(45deg, white, #f8f8f8);
+        font-size: 4rem;
+        -webkit-background-clip: text;
+        color: transparent;
+        mix-blend-mode: overlay;
+        animation: blend-shift 8s infinite alternate;
+      }
+
+      @keyframes blend-shift {
+        0% {
+          mix-blend-mode: overlay;
+        }
+        33% {
+          mix-blend-mode: color-dodge;
+        }
+        66% {
+          mix-blend-mode: exclusion;
+        }
+        100% {
+          mix-blend-mode: screen;
+        }
+      }
     </style>
   </head>
   <body>
@@ -103,7 +126,7 @@
         </p>
       </section>
       <section class="frosted-panel">
-        <h2>V and V Wedding Fest</h2>
+        <h2 class="vibrant-text">V and V Wedding Fest</h2>
         <p>
           Aliquam ultrices felis et accumsan porttitor. Suspendisse a mollis
           est, et elementum neque. Nam id sem turpis. Integer id ex tempor dui
