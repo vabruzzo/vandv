@@ -8,6 +8,7 @@
       body {
         margin: 0;
         padding: 0;
+        padding-top: 900px;
         background-image: url("/static/bg.jpg");
         background-size: 100% auto;
         background-repeat: no-repeat;
@@ -18,22 +19,42 @@
       section {
         width: 100%;
         max-width: 800px;
+        height: 600px;
         background-color: rgba(255, 255, 255, 0.8);
         border: 1px solid #cccccc;
         border-radius: 8px;
+        margin: 0 auto;
         margin-bottom: 20px;
         padding: 20px;
         box-sizing: border-box;
-
       }
+      .rainbow-border {
+        border: 4px solid transparent;
+        border-image: linear-gradient(
+          to right,
+          red,
+          orange,
+          yellow,
+          green,
+          blue,
+          indigo,
+          violet
+        );
+        border-image-slice: 1;
+      }
+      .glow-text {
+  color: white;
+  text-shadow: 0 0 5px #ff00de, 0 0 10px #ff00de, 0 0 15px #ff00de;
+}
     </style>
   </head>
   <body>
     <main class="content">
+      <section class="rainbow-border">test</section>
+      <section class="glow-text">lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum</section>
       <section>test</section>
       <section>test</section>
-      <section>test</section>
-      <section>test</section>
+
     </main>
   </body>
 </html>
