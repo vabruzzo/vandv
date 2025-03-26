@@ -30,41 +30,43 @@
       }
       .animated-border {
         position: relative;
+        z-index: 1;
       }
-      .animated-border::after {
+      .animated-border::before {
         content: "";
         position: absolute;
-        top: -3px;
-        left: -3px;
-        right: -3px;
-        bottom: -3px;
-        background: linear-gradient(
-          45deg,
-          #ff0000,
-          #ff7300,
-          #fffb00,
-          #48ff00,
-          #00ffd5,
-          #002bff,
-          #7a00ff,
-          #ff00c8,
-          #ff0000
-        );
-        background-size: 400%;
-        z-index: -1;
-        filter: blur(5px);
-        animation: glowing 20s linear infinite;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
         border-radius: 10px;
+        background: linear-gradient(
+          135deg,
+          #ff0080,
+          #ff8000,
+          #80ff00,
+          #00ff80,
+          #0080ff,
+          #8000ff,
+          #ff0080
+        );
+        background-size: 300%;
+        z-index: -1;
+        filter: blur(4px);
+        opacity: 0.8;
+        animation: smoothGlow 10s ease-in-out infinite;
+        will-change: background-position;
+        transform: translateZ(0);
       }
-      @keyframes glowing {
+      @keyframes smoothGlow {
         0% {
-          background-position: 0 0;
+          background-position: 0% 50%;
         }
         50% {
-          background-position: 400% 0;
+          background-position: 100% 50%;
         }
         100% {
-          background-position: 0 0;
+          background-position: 0% 50%;
         }
       }
       .frosted-panel {
@@ -74,87 +76,11 @@
         padding: 20px;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
       }
-      .enhanced-frosted-panel {
-        /* Base frosted glass effect */
-        background: rgba(255, 255, 255, 0.25);
-        backdrop-filter: blur(8px);
-        border-radius: 10px;
-        padding: 20px;
-
-        /* Enhanced effects */
-        border: 1px solid rgba(255, 255, 255, 0.18);
-        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37),
-          inset 0 0 0 1px rgba(255, 255, 255, 0.07);
-
-        /* Subtle inner glow */
-        position: relative;
-        overflow: hidden;
-
-        /* Optional subtle animation */
-        transition: all 0.3s ease;
-        animation: float 6s ease-in-out infinite;
-      }
-
-      /* Hover state enhancement */
-      .enhanced-frosted-panel:hover {
-        backdrop-filter: blur(12px);
-        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.47),
-          inset 0 0 0 1px rgba(255, 255, 255, 0.1);
-        transform: translateY(-5px);
-      }
-
-      @keyframes float {
-        0% {
-          transform: translateY(0px);
-        }
-        50% {
-          transform: translateY(-10px);
-        }
-        100% {
-          transform: translateY(0px);
-        }
-      }
-
-      /* Add subtle shine effect */
-      .enhanced-frosted-panel::before {
-        content: "";
-        position: absolute;
-        top: -50%;
-        left: -50%;
-        width: 200%;
-        height: 200%;
-        background: linear-gradient(
-          to bottom right,
-          rgba(255, 255, 255, 0) 0%,
-          rgba(255, 255, 255, 0.1) 100%
-        );
-        transform: rotate(30deg);
-        pointer-events: none;
-
-        /* Add this for gradient border */
-        border: double 1px transparent;
-        background-image: linear-gradient(
-            rgba(255, 255, 255, 0.25),
-            rgba(255, 255, 255, 0.25)
-          ),
-          linear-gradient(
-            45deg,
-            rgba(255, 192, 203, 0.5),
-            rgba(147, 112, 219, 0.5)
-          );
-        background-origin: border-box;
-        background-clip: padding-box, border-box;
-      }
-      .enhanced-frosted-panel h2 {
-        font-size: 3rem;
-        text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
-        color: #333;
-      }
     </style>
   </head>
   <body>
     <main class="content">
-      <section class="rainbow-border">
+      <section class="fronsted-panel">
         <p>
           Aliquam ultrices felis et accumsan porttitor. Suspendisse a mollis
           est, et elementum neque. Nam id sem turpis. Integer id ex tempor dui
@@ -176,7 +102,7 @@
           maximus in turpis vitae gravida.
         </p>
       </section>
-      <section class="enhanced-frosted-panel">
+      <section class="frosted-panel">
         <h2>V and V Wedding Fest</h2>
         <p>
           Aliquam ultrices felis et accumsan porttitor. Suspendisse a mollis
@@ -222,28 +148,6 @@
         </p>
       </section>
       <section class="frosted-panel">
-        <p>
-          Aliquam ultrices felis et accumsan porttitor. Suspendisse a mollis
-          est, et elementum neque. Nam id sem turpis. Integer id ex tempor dui
-          convallis finibus. Maecenas augue arcu, dignissim in dictum a, cursus
-          quis nisl. Praesent eget velit sit amet purus egestas luctus. Morbi
-          mattis neque at justo lacinia, et fermentum metus viverra.
-        </p>
-        <p>
-          Donec et magna vel mi lacinia porta a non dolor. Nulla ornare suscipit
-          nisl sit amet lobortis. Nunc neque mi, efficitur vitae ligula vel,
-          aliquet pellentesque nisl. Suspendisse a placerat ante. Donec faucibus
-          libero at nulla elementum maximus. Vivamus et tristique dui, at
-          bibendum felis. Sed vestibulum non nulla non aliquam. Fusce dapibus
-          convallis eros ut tincidunt. Quisque cursus nisl quam, nec ullamcorper
-          risus finibus non. Maecenas et nunc et turpis tristique volutpat sed
-          suscipit leo. Etiam ultricies risus ex, nec tristique lorem
-          pellentesque a. Aliquam ac nisi ultricies, cursus ante id,
-          pellentesque urna. Donec volutpat nec leo sit amet dapibus. Aliquam
-          maximus in turpis vitae gravida.
-        </p>
-      </section>
-      <section class="themed-card">
         <p>
           Aliquam ultrices felis et accumsan porttitor. Suspendisse a mollis
           est, et elementum neque. Nam id sem turpis. Integer id ex tempor dui
