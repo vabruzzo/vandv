@@ -8,7 +8,7 @@
       body {
         margin: 0;
         padding: 0;
-        padding-top: 900px;
+        padding-top: 1500px;
         background-image: url("/static/bg.jpg");
         background-size: 100% auto;
         background-repeat: no-repeat;
@@ -43,18 +43,179 @@
         border-image-slice: 1;
       }
       .glow-text {
-  color: white;
-  text-shadow: 0 0 5px #ff00de, 0 0 10px #ff00de, 0 0 15px #ff00de;
-}
+        color: white;
+        text-shadow: 0 0 5px #ff00de, 0 0 10px #ff00de, 0 0 15px #ff00de;
+      }
+      .animated-border {
+        position: relative;
+      }
+
+      .animated-border::after {
+        content: "";
+        position: absolute;
+        top: -3px;
+        left: -3px;
+        right: -3px;
+        bottom: -3px;
+        background: linear-gradient(
+          45deg,
+          #ff0000,
+          #ff7300,
+          #fffb00,
+          #48ff00,
+          #00ffd5,
+          #002bff,
+          #7a00ff,
+          #ff00c8,
+          #ff0000
+        );
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        animation: glowing 20s linear infinite;
+        border-radius: 10px;
+      }
+
+      @keyframes glowing {
+        0% {
+          background-position: 0 0;
+        }
+        50% {
+          background-position: 400% 0;
+        }
+        100% {
+          background-position: 0 0;
+        }
+      }
+      .frosted-panel {
+        background: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(8px);
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      }
+      .themed-card {
+        background: white;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 5px 5px 0 rgba(255, 105, 180, 0.7),
+          10px 10px 0 rgba(147, 112, 219, 0.5),
+          15px 15px 0 rgba(64, 224, 208, 0.3);
+      }
     </style>
   </head>
   <body>
     <main class="content">
-      <section class="rainbow-border">test</section>
-      <section class="glow-text">lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum</section>
-      <section>test</section>
-      <section>test</section>
-
+      <section class="rainbow-border">
+        <p>
+          Aliquam ultrices felis et accumsan porttitor. Suspendisse a mollis
+          est, et elementum neque. Nam id sem turpis. Integer id ex tempor dui
+          convallis finibus. Maecenas augue arcu, dignissim in dictum a, cursus
+          quis nisl. Praesent eget velit sit amet purus egestas luctus. Morbi
+          mattis neque at justo lacinia, et fermentum metus viverra.
+        </p>
+        <p>
+          Donec et magna vel mi lacinia porta a non dolor. Nulla ornare suscipit
+          nisl sit amet lobortis. Nunc neque mi, efficitur vitae ligula vel,
+          aliquet pellentesque nisl. Suspendisse a placerat ante. Donec faucibus
+          libero at nulla elementum maximus. Vivamus et tristique dui, at
+          bibendum felis. Sed vestibulum non nulla non aliquam. Fusce dapibus
+          convallis eros ut tincidunt. Quisque cursus nisl quam, nec ullamcorper
+          risus finibus non. Maecenas et nunc et turpis tristique volutpat sed
+          suscipit leo. Etiam ultricies risus ex, nec tristique lorem
+          pellentesque a. Aliquam ac nisi ultricies, cursus ante id,
+          pellentesque urna. Donec volutpat nec leo sit amet dapibus. Aliquam
+          maximus in turpis vitae gravida.
+        </p>
+      </section>
+      <section class="glow-text">
+        <p>
+          Aliquam ultrices felis et accumsan porttitor. Suspendisse a mollis
+          est, et elementum neque. Nam id sem turpis. Integer id ex tempor dui
+          convallis finibus. Maecenas augue arcu, dignissim in dictum a, cursus
+          quis nisl. Praesent eget velit sit amet purus egestas luctus. Morbi
+          mattis neque at justo lacinia, et fermentum metus viverra.
+        </p>
+        <p>
+          Donec et magna vel mi lacinia porta a non dolor. Nulla ornare suscipit
+          nisl sit amet lobortis. Nunc neque mi, efficitur vitae ligula vel,
+          aliquet pellentesque nisl. Suspendisse a placerat ante. Donec faucibus
+          libero at nulla elementum maximus. Vivamus et tristique dui, at
+          bibendum felis. Sed vestibulum non nulla non aliquam. Fusce dapibus
+          convallis eros ut tincidunt. Quisque cursus nisl quam, nec ullamcorper
+          risus finibus non. Maecenas et nunc et turpis tristique volutpat sed
+          suscipit leo. Etiam ultricies risus ex, nec tristique lorem
+          pellentesque a. Aliquam ac nisi ultricies, cursus ante id,
+          pellentesque urna. Donec volutpat nec leo sit amet dapibus. Aliquam
+          maximus in turpis vitae gravida.
+        </p>
+      </section>
+      <section class="animated-border">
+        <p>
+          Aliquam ultrices felis et accumsan porttitor. Suspendisse a mollis
+          est, et elementum neque. Nam id sem turpis. Integer id ex tempor dui
+          convallis finibus. Maecenas augue arcu, dignissim in dictum a, cursus
+          quis nisl. Praesent eget velit sit amet purus egestas luctus. Morbi
+          mattis neque at justo lacinia, et fermentum metus viverra.
+        </p>
+        <p>
+          Donec et magna vel mi lacinia porta a non dolor. Nulla ornare suscipit
+          nisl sit amet lobortis. Nunc neque mi, efficitur vitae ligula vel,
+          aliquet pellentesque nisl. Suspendisse a placerat ante. Donec faucibus
+          libero at nulla elementum maximus. Vivamus et tristique dui, at
+          bibendum felis. Sed vestibulum non nulla non aliquam. Fusce dapibus
+          convallis eros ut tincidunt. Quisque cursus nisl quam, nec ullamcorper
+          risus finibus non. Maecenas et nunc et turpis tristique volutpat sed
+          suscipit leo. Etiam ultricies risus ex, nec tristique lorem
+          pellentesque a. Aliquam ac nisi ultricies, cursus ante id,
+          pellentesque urna. Donec volutpat nec leo sit amet dapibus. Aliquam
+          maximus in turpis vitae gravida.
+        </p>
+      </section>
+      <section class="frosted-panel">
+        <p>
+          Aliquam ultrices felis et accumsan porttitor. Suspendisse a mollis
+          est, et elementum neque. Nam id sem turpis. Integer id ex tempor dui
+          convallis finibus. Maecenas augue arcu, dignissim in dictum a, cursus
+          quis nisl. Praesent eget velit sit amet purus egestas luctus. Morbi
+          mattis neque at justo lacinia, et fermentum metus viverra.
+        </p>
+        <p>
+          Donec et magna vel mi lacinia porta a non dolor. Nulla ornare suscipit
+          nisl sit amet lobortis. Nunc neque mi, efficitur vitae ligula vel,
+          aliquet pellentesque nisl. Suspendisse a placerat ante. Donec faucibus
+          libero at nulla elementum maximus. Vivamus et tristique dui, at
+          bibendum felis. Sed vestibulum non nulla non aliquam. Fusce dapibus
+          convallis eros ut tincidunt. Quisque cursus nisl quam, nec ullamcorper
+          risus finibus non. Maecenas et nunc et turpis tristique volutpat sed
+          suscipit leo. Etiam ultricies risus ex, nec tristique lorem
+          pellentesque a. Aliquam ac nisi ultricies, cursus ante id,
+          pellentesque urna. Donec volutpat nec leo sit amet dapibus. Aliquam
+          maximus in turpis vitae gravida.
+        </p>
+      </section>
+      <section class="themed-card">
+        <p>
+          Aliquam ultrices felis et accumsan porttitor. Suspendisse a mollis
+          est, et elementum neque. Nam id sem turpis. Integer id ex tempor dui
+          convallis finibus. Maecenas augue arcu, dignissim in dictum a, cursus
+          quis nisl. Praesent eget velit sit amet purus egestas luctus. Morbi
+          mattis neque at justo lacinia, et fermentum metus viverra.
+        </p>
+        <p>
+          Donec et magna vel mi lacinia porta a non dolor. Nulla ornare suscipit
+          nisl sit amet lobortis. Nunc neque mi, efficitur vitae ligula vel,
+          aliquet pellentesque nisl. Suspendisse a placerat ante. Donec faucibus
+          libero at nulla elementum maximus. Vivamus et tristique dui, at
+          bibendum felis. Sed vestibulum non nulla non aliquam. Fusce dapibus
+          convallis eros ut tincidunt. Quisque cursus nisl quam, nec ullamcorper
+          risus finibus non. Maecenas et nunc et turpis tristique volutpat sed
+          suscipit leo. Etiam ultricies risus ex, nec tristique lorem
+          pellentesque a. Aliquam ac nisi ultricies, cursus ante id,
+          pellentesque urna. Donec volutpat nec leo sit amet dapibus. Aliquam
+          maximus in turpis vitae gravida.
+        </p>
+      </section>
     </main>
   </body>
 </html>
