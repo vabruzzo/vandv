@@ -3,29 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./static/favicon.ico" />
     <title>V AND V</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <style>
       body {
         margin: 0;
         padding: 0;
-        padding-top: 1500px;
-        background-image: url("/static/bg.jpg");
+        background-image: url("./static/bg.jpg");
         background-size: 100% auto;
         background-repeat: no-repeat;
         background-attachment: scroll;
         background-position: center top;
-        height: 9600px;
       }
       section {
         width: 100%;
-        max-width: 800px;
-        height: 600px;
+        max-width: 1000px;
         background-color: rgba(255, 255, 255, 0.8);
-        border: 1px solid #cccccc;
+        border: 1px solid #999999;
         border-radius: 8px;
         margin: 0 auto;
-        margin-bottom: 20px;
-        padding: 20px;
+        margin-bottom: 200px;
+        padding: 80px 40px;
         box-sizing: border-box;
       }
       .animated-border {
@@ -50,7 +54,7 @@
           #8000ff,
           #ff0080
         );
-        background-size: 300%;
+        background-size: 400%;
         z-index: -1;
         filter: blur(4px);
         opacity: 0.3;
@@ -73,38 +77,54 @@
         background: rgba(255, 255, 255, 0.25);
         backdrop-filter: blur(8px);
         border-radius: 10px;
-        padding: 20px;
+        padding: 20px 60px;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
       }
-      .vibrant-text {
-        background: linear-gradient(45deg, white, #f8f8f8);
-        font-size: 8rem;
-        margin: 0 auto;
-        -webkit-background-clip: text;
-        color: transparent;
-        mix-blend-mode: overlay;
-        animation: blend-shift 8s infinite alternate;
+      .montserrat,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+      }
+      .garamond,
+      p {
+        font-family: "Cormorant Garamond", serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+      }
+      header {
+        margin-top: 250px;
+        margin-bottom: 400px;
+        text-align: center;
+      }
+ 
+      h1 {
+        font-size: 6rem;
+        font-weight: 600;
+        color: darkslategray;
+      }
+      h2 {
+        font-size: 3rem;
+        font-weight: 500;
+      }
+      p {
+        font-size: 1.75rem;
       }
 
-      @keyframes blend-shift {
-        0% {
-          mix-blend-mode: overlay;
-        }
-        33% {
-          mix-blend-mode: color-dodge;
-        }
-        66% {
-          mix-blend-mode: exclusion;
-        }
-        100% {
-          mix-blend-mode: screen;
-        }
-      }
     </style>
   </head>
   <body>
     <main class="content">
-      <section class="fronsted-panel">
+      <header class="">
+        <h1 class="vibrant-text">V and V Wedding Fest</h1>
+      </header>
+      <section class="frosted-panel">
+        <h2 class="montserrat">Welcome</h2>
         <p>
           Aliquam ultrices felis et accumsan porttitor. Suspendisse a mollis
           est, et elementum neque. Nam id sem turpis. Integer id ex tempor dui
@@ -126,7 +146,6 @@
           maximus in turpis vitae gravida.
         </p>
       </section>
-      <h2 class="vibrant-text">V and V Wedding Fest</h2>
       <section class="frosted-panel">
         <p>
           Aliquam ultrices felis et accumsan porttitor. Suspendisse a mollis
