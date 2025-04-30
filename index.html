@@ -14,12 +14,19 @@
     <style>
       body {
         margin: 0;
-        padding: 0;
+        padding: 12px;
         background-image: url("./static/bg.jpg");
         background-size: 100% auto;
         background-repeat: no-repeat;
         background-attachment: scroll;
         background-position: center top;
+        background-color: rgb(3, 3, 28);
+      }
+      .hero-image {
+        display: block;
+        width: 80%;
+        max-width: 1200px;
+        margin: 60px auto 60px;
       }
       section {
         width: 100%;
@@ -29,12 +36,18 @@
         border-radius: 8px;
         margin: 0 auto;
         margin-bottom: 200px;
-        padding: 80px 40px;
+        padding: 80px 60px;
         box-sizing: border-box;
       }
       .animated-border {
         position: relative;
         z-index: 1;
+      }
+      p {
+        margin: 3px;
+      }
+      .center {
+        text-align: center;
       }
       .animated-border::before {
         content: "";
@@ -74,10 +87,10 @@
         }
       }
       .frosted-panel {
-        background: rgba(255, 255, 255, 0.25);
+        background: rgba(255, 255, 255, 0.75);
         backdrop-filter: blur(8px);
         border-radius: 10px;
-        padding: 20px 60px;
+        padding: 40px 60px;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
       }
       .montserrat,
@@ -92,126 +105,255 @@
         font-style: normal;
       }
       .garamond,
-      p {
+      p,
+      pre {
         font-family: "Cormorant Garamond", serif;
         font-optical-sizing: auto;
         font-style: normal;
       }
       header {
-        margin-top: 250px;
-        margin-bottom: 400px;
+        margin-top: 100px;
         text-align: center;
       }
- 
+
       h1 {
-        font-size: 6rem;
+        font-size: 4rem;
         font-weight: 600;
-        color: darkslategray;
-      }
-      h2 {
-        font-size: 3rem;
-        font-weight: 500;
-      }
-      p {
-        font-size: 1.75rem;
+        color: rgb(3, 3, 28);
       }
 
+
+
+  
+
+      h2 {
+        font-size: 2.5rem;
+        font-weight: 500;
+        margin: 0;
+      }
+      p,
+      pre {
+        font-size: 1.75rem;
+      }
     </style>
   </head>
   <body>
     <main class="content">
       <header class="">
-        <h1 class="vibrant-text">V and V Wedding Fest</h1>
+        <h1 class="">V&V’S WEDDING FEST</h1>
       </header>
+      <img src="./static/us.png" alt="Virginia and Vincent" class="hero-image">
       <section class="frosted-panel">
-        <h2 class="montserrat">Welcome</h2>
-        <p>
-          Aliquam ultrices felis et accumsan porttitor. Suspendisse a mollis
-          est, et elementum neque. Nam id sem turpis. Integer id ex tempor dui
-          convallis finibus. Maecenas augue arcu, dignissim in dictum a, cursus
-          quis nisl. Praesent eget velit sit amet purus egestas luctus. Morbi
-          mattis neque at justo lacinia, et fermentum metus viverra.
-        </p>
-        <p>
-          Donec et magna vel mi lacinia porta a non dolor. Nulla ornare suscipit
-          nisl sit amet lobortis. Nunc neque mi, efficitur vitae ligula vel,
-          aliquet pellentesque nisl. Suspendisse a placerat ante. Donec faucibus
-          libero at nulla elementum maximus. Vivamus et tristique dui, at
-          bibendum felis. Sed vestibulum non nulla non aliquam. Fusce dapibus
-          convallis eros ut tincidunt. Quisque cursus nisl quam, nec ullamcorper
-          risus finibus non. Maecenas et nunc et turpis tristique volutpat sed
-          suscipit leo. Etiam ultricies risus ex, nec tristique lorem
-          pellentesque a. Aliquam ac nisi ultricies, cursus ante id,
-          pellentesque urna. Donec volutpat nec leo sit amet dapibus. Aliquam
-          maximus in turpis vitae gravida.
-        </p>
+        <h2 class="montserrat center">Virginia Wagner & Vincent Abruzzo</h2>
+        <div style="margin-top: 20px; margin-bottom: 20px">
+          <p class="center">Gilbertsville Farmhouse</p>
+          <p class="center">336 Coye Brook Rd, South New Berlin, NY</p>
+          <p class="center">Friday August 15 – Sun August 17</p>
+          <p class="center">Ceremony Saturday August 16 4:30pm</p>
+        </div>
+        <div style="margin-top: 20px; margin-bottom: 20px">
+          <p class="center">
+            Music * Swimming * Lawn Games * Farm Animals * Elegant Dining
+          </p>
+          <p class="center">Bonfires * Late Night Dancing * On-Site Glamping</p>
+        </div>
+        <p class="center">CHOOSE YOUR OWN ADVENTURE</p>
+        <p class="center">1. Stay on-site for two days of activities or</p>
+        <p class="center">2. Attend Saturday’s celebration</p>
       </section>
       <section class="frosted-panel">
-        <p>
-          Aliquam ultrices felis et accumsan porttitor. Suspendisse a mollis
-          est, et elementum neque. Nam id sem turpis. Integer id ex tempor dui
-          convallis finibus. Maecenas augue arcu, dignissim in dictum a, cursus
-          quis nisl. Praesent eget velit sit amet purus egestas luctus. Morbi
-          mattis neque at justo lacinia, et fermentum metus viverra.
-        </p>
-        <p>
-          Donec et magna vel mi lacinia porta a non dolor. Nulla ornare suscipit
-          nisl sit amet lobortis. Nunc neque mi, efficitur vitae ligula vel,
-          aliquet pellentesque nisl. Suspendisse a placerat ante. Donec faucibus
-          libero at nulla elementum maximus. Vivamus et tristique dui, at
-          bibendum felis. Sed vestibulum non nulla non aliquam. Fusce dapibus
-          convallis eros ut tincidunt. Quisque cursus nisl quam, nec ullamcorper
-          risus finibus non. Maecenas et nunc et turpis tristique volutpat sed
-          suscipit leo. Etiam ultricies risus ex, nec tristique lorem
-          pellentesque a. Aliquam ac nisi ultricies, cursus ante id,
-          pellentesque urna. Donec volutpat nec leo sit amet dapibus. Aliquam
-          maximus in turpis vitae gravida.
-        </p>
+        <div style="margin-bottom: 20px">
+          <h2 class="montserrat center">ITINERARY</h2>
+          <p class="center">(Stay tuned for more details)</p>
+        </div>
+        <p>FRIDAY</p>
+        <div style="display: flex; margin-bottom: 20px">
+          <div style="width: 20%">
+            <p>11am</p>
+            <p>1pm</p>
+            <p>2-6pm</p>
+            <p>6pm</p>
+            <p>8pm</p>
+          </div>
+          <div>
+            <p>Arrival for On-Site Guests</p>
+            <p>Lunch at the Farmhouse</p>
+            <p>Swimming, Lawn Games, Explore Gilbertsville Farm</p>
+            <p>Welcome Dinner for On-Site Guests in Hayloft</p>
+            <p>Music & Bonfire</p>
+          </div>
+        </div>
+        <p>SATURDAY</p>
+        <div style="display: flex; margin-bottom: 20px">
+          <div style="width: 20%">
+            <p>10am-11:30</p>
+            <p>3:30pm</p>
+            <p>4:30pm</p>
+            <p>5pm</p>
+            <p>6pm</p>
+            <p>10pm-1am</p>
+          </div>
+          <div>
+            <p>Breakfast for On-Site Guests in Hayloft</p>
+            <p>Arrival and Welcome Drink for All Guests in Milking Parlour</p>
+            <p>Ceremony at Hilltop</p>
+            <p>Cocktail Hour in Milking Parlour</p>
+            <p>Dinner & Reception in Chandelier Barn</p>
+            <p>Dancing and Drinks Continues in After-Party Lounge</p>
+          </div>
+        </div>
+        <p>SUNDAY</p>
+        <div style="display: flex; margin-bottom: 20px">
+          <div style="width: 20%">
+            <p>9-11am</p>
+          </div>
+          <div>
+            <p>Bagel Brunch for On-Site Guests at Farmhouse</p>
+          </div>
+        </div>
       </section>
-      <section class="animated-border">
-        <p>
-          Aliquam ultrices felis et accumsan porttitor. Suspendisse a mollis
-          est, et elementum neque. Nam id sem turpis. Integer id ex tempor dui
-          convallis finibus. Maecenas augue arcu, dignissim in dictum a, cursus
-          quis nisl. Praesent eget velit sit amet purus egestas luctus. Morbi
-          mattis neque at justo lacinia, et fermentum metus viverra.
-        </p>
-        <p>
-          Donec et magna vel mi lacinia porta a non dolor. Nulla ornare suscipit
-          nisl sit amet lobortis. Nunc neque mi, efficitur vitae ligula vel,
-          aliquet pellentesque nisl. Suspendisse a placerat ante. Donec faucibus
-          libero at nulla elementum maximus. Vivamus et tristique dui, at
-          bibendum felis. Sed vestibulum non nulla non aliquam. Fusce dapibus
-          convallis eros ut tincidunt. Quisque cursus nisl quam, nec ullamcorper
-          risus finibus non. Maecenas et nunc et turpis tristique volutpat sed
-          suscipit leo. Etiam ultricies risus ex, nec tristique lorem
-          pellentesque a. Aliquam ac nisi ultricies, cursus ante id,
-          pellentesque urna. Donec volutpat nec leo sit amet dapibus. Aliquam
-          maximus in turpis vitae gravida.
-        </p>
+      <section class="frosted-panel">
+        <h2 class="montserrat center">DRESS</h2>
+        <div style="margin-top: 20px; margin-bottom: 20px">
+          <p class="center">DAYTIME</p>
+          <p class="center">
+            Casual and comfortable for farm exploration and beach lounging.
+          </p>
+        </div>
+        <div style="margin-top: 20px; margin-bottom: 20px">
+          <p class="center">WELCOME DINNER</p>
+          <p class="center">
+            Summer Festive: Sun dresses, jeans, slacks - all welcome!
+          </p>
+        </div>
+
+        <div style="margin-top: 20px; margin-bottom: 20px">
+          <p class="center">WEDDING</p>
+
+          <p class="center">
+            Colorful Formal. Bring out those bright summer hues!
+          </p>
+        </div>
+        <div style="margin-top: 20px; margin-bottom: 20px">
+          <p class="center">GENERAL</p>
+          <p class="center">
+            Wear flats or wedges for traversing the farm and grassy ceremony
+            site: no heels.
+          </p>
+          <p class="center">
+            Expect midday heat and bring a layer for the night.
+          </p>
+        </div>
       </section>
-      <section class="frosted-panel animated-border">
-        <p>
-          Aliquam ultrices felis et accumsan porttitor. Suspendisse a mollis
-          est, et elementum neque. Nam id sem turpis. Integer id ex tempor dui
-          convallis finibus. Maecenas augue arcu, dignissim in dictum a, cursus
-          quis nisl. Praesent eget velit sit amet purus egestas luctus. Morbi
-          mattis neque at justo lacinia, et fermentum metus viverra.
-        </p>
-        <p>
-          Donec et magna vel mi lacinia porta a non dolor. Nulla ornare suscipit
-          nisl sit amet lobortis. Nunc neque mi, efficitur vitae ligula vel,
-          aliquet pellentesque nisl. Suspendisse a placerat ante. Donec faucibus
-          libero at nulla elementum maximus. Vivamus et tristique dui, at
-          bibendum felis. Sed vestibulum non nulla non aliquam. Fusce dapibus
-          convallis eros ut tincidunt. Quisque cursus nisl quam, nec ullamcorper
-          risus finibus non. Maecenas et nunc et turpis tristique volutpat sed
-          suscipit leo. Etiam ultricies risus ex, nec tristique lorem
-          pellentesque a. Aliquam ac nisi ultricies, cursus ante id,
-          pellentesque urna. Donec volutpat nec leo sit amet dapibus. Aliquam
-          maximus in turpis vitae gravida.
-        </p>
+      <section class="frosted-panel">
+        <h2 class="center">ACCOMMODATIONS</h2>
+        <div style="margin-top: 20px; margin-bottom: 20px">
+          <p>ON-SITE</p>
+          <p style="margin-bottom: 1rem">
+            Gilbertsville Farmhouse has beautiful places to stay – from private
+            A-frame cabins to elevated glamping tents. These are first come,
+            first served via your RSVP. There are more guests than on-site
+            lodging.
+          </p>
+          <p>
+            Each site has a king-sized bed that sleeps two. Stay with a friend,
+            loved one, or solo. The more friends who double up the merrier.
+            (It’s possible to bring a blow-up mattress.) Lodging is $500 per
+            glamping site, which covers 2 nights. Note that one-night stays
+            on-site aren’t possible, but there are off-site options below.
+          </p>
+        </div>
+
+        <div style="margin-top: 20px; margin-bottom: 20px">
+          <p>OFF-SITE</p>
+          <p>
+            We’ve reserved rooms for guests at a few hotels and guest houses in
+            the area. Please see this Doc for details. Book soon, as there are
+            multiple events in the area that weekend.
+          </p>
+        </div>
+        <div style="margin-top: 20px; margin-bottom: 20px">
+          <p>DIRECTIONS</p>
+          <p>Click for directions and airport recommendations.</p>
+        </div>
+      </section>
+      <section class="frosted-panel">
+        <h2 class="center">RSVP</h2>
+        <div style="margin-top: 20px; margin-bottom: 20px">
+          <p class="center">Please RSVP HERE by June 15</p>
+        </div>
+      </section>
+      <section class="frosted-panel">
+        <h2 class="center">THANK YOU</h2>
+        <div style="margin-top: 20px; margin-bottom: 20px">
+          <p class="center">
+            Your love and support mean the world to us as we begin this new
+            chapter.
+          </p>
+        </div>
+
+        <div style="margin-top: 20px; margin-bottom: 20px">
+          <p class="center">
+            We are not expecting gifts. We realize that many people are renting
+            one or two nights of accommodations and giving the gift of your
+            time.
+          </p>
+        </div>
+        <div style="margin-top: 20px; margin-bottom: 20px">
+          <p class="center">
+            If you’d like to send us a card, we’d love to hear from you.
+          </p>
+          <p class="center">Virginia Wagner & Vincent Abruzzo</p>
+          <p class="center">150 Stone Jug Road</p>
+          <p class="center">Craryville NY 12521</p>
+        </div>
+        <div style="margin-top: 20px; margin-bottom: 20px">
+          <p class="center">
+            For those who would still like to gift, we will be setting up a
+            small registry (coming soon) for our new home and travel fund.
+          </p>
+        </div>
       </section>
     </main>
   </body>
+  <!-- Add this script at the end of your body tag -->
+  <script>
+    // Function to get background image dimensions and set body height accordingly
+    function setBodyHeightToBackgroundImageHeight() {
+      // Create a new image object
+      const img = new Image();
+
+      // Get the background image URL from the computed style
+      const bgImageUrl = getComputedStyle(document.body).backgroundImage.match(
+        /url\(["']?([^"']*)["']?\)/
+      )[1];
+
+      // Set up an onload handler that fires when the image is loaded
+      img.onload = function () {
+        // Calculate the actual height based on the image dimensions and the body width
+        const bodyWidth = document.body.clientWidth;
+        const imgWidth = this.width;
+        const imgHeight = this.height;
+
+        // Calculate the proportional height based on how the image is being rendered
+        // Since you're using background-size: 100% auto, the image width will match body width
+        const proportionalHeight = (bodyWidth / imgWidth) * imgHeight;
+
+        // Set the body min-height to the calculated height
+        document.body.style.minHeight = `${proportionalHeight}px`;
+        console.log(
+          `Set body height to ${proportionalHeight}px based on background image dimensions ${imgWidth}x${imgHeight}`
+        );
+      };
+
+      // Set the image source to trigger loading
+      img.src = bgImageUrl;
+    }
+
+    // Run the function when page loads
+    window.addEventListener("load", setBodyHeightToBackgroundImageHeight);
+
+    // Also run when window is resized
+    window.addEventListener("resize", setBodyHeightToBackgroundImageHeight);
+  </script>
 </html>
