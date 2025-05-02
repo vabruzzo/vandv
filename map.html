@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./static/favicon.ico" />
+    <title>V AND V</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html {
+        overflow-x: hidden;
+      }
+      body {
+        margin: 0;
+        padding: 12px;
+        background-image: url("./static/bg.jpg");
+        background-size: 100% auto;
+        background-repeat: repeat-y;
+        background-attachment: scroll;
+        background-position: center top;
+        background-color: rgb(3, 3, 28);
+        overflow-x: hidden;
+      }
+      .hero-image {
+        display: block;
+        width: 75%;
+        max-width: 1000px;
+        margin: 60px auto 60px;
+      }
+      section {
+        width: 100%;
+        max-width: 1000px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid #999999;
+        border-radius: 8px;
+        margin: 0 auto;
+        margin-bottom: 128px;
+        padding: 80px 60px;
+        box-sizing: border-box;
+      }
+      .animated-border {
+        position: relative;
+        z-index: 1;
+      }
+      p {
+        margin: 3px;
+      }
+      .center {
+        text-align: center;
+      }
+      .title {
+        font-size: 5rem;
+        font-weight: 600;
+        color: rebeccapurple;
+        text-shadow: 0 0 15px rgba(255, 255, 255, 0.7),
+          0 0 30px rgba(255, 255, 255, 0.4);
+        letter-spacing: 3px;
+        position: relative;
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 0;
+        border-radius: 8px;
+        backdrop-filter: blur(3px);
+        background: rgba(255, 255, 255, 0.15);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        animation: glowPulse 4s ease-in-out infinite;
+      }
+      @keyframes glowPulse {
+        0%,
+        100% {
+          text-shadow: 0 0 15px rgba(255, 255, 255, 0.7),
+            0 0 30px rgba(255, 255, 255, 0.4);
+        }
+        50% {
+          text-shadow: 0 0 20px rgba(255, 255, 255, 0.9),
+            0 0 40px rgba(255, 255, 255, 0.6);
+        }
+      }
+      .animated-border::before {
+        content: "";
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        border-radius: 10px;
+        background: linear-gradient(
+          135deg,
+          #ff0080,
+          #ff8000,
+          #80ff00,
+          #00ff80,
+          #0080ff,
+          #8000ff,
+          #ff0080
+        );
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(4px);
+        opacity: 0.3;
+        animation: smoothGlow 12s ease-in-out infinite;
+        will-change: background-position;
+        transform: translateZ(0);
+      }
+      @keyframes smoothGlow {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+      .frosted-panel {
+        background: rgba(255, 255, 255, 0.75);
+        backdrop-filter: blur(8px);
+        border-radius: 10px;
+        padding: 40px 60px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      }
+      .montserrat,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+      }
+      .garamond,
+      p,
+      pre {
+        font-family: "Cormorant Garamond", serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+      }
+      header {
+        margin-top: 80px;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 5rem;
+        font-weight: 500;
+        color: rebeccapurple;
+      }
+
+      a {
+        color: rebeccapurple;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      h2 {
+        font-size: 2.5rem;
+        font-weight: 500;
+        margin: 0;
+      }
+      p,
+      pre {
+        font-size: 1.75rem;
+      }
+      /* Media query for screens with max width of 1024px */
+      @media screen and (max-width: 1024px) {
+        /* Add your responsive styles here */
+        .frosted-panel {
+          padding: 40px 16px;
+          margin-bottom: 48px;
+        }
+        h1 {
+          font-size: 2.5rem; /* Smaller heading size */
+        }
+
+        h2 {
+          font-size: 1.5rem; /* Smaller subheading size */
+        }
+        p,
+        pre {
+          font-size: 1.25rem; /* Slightly smaller text */
+        }
+        .hero-image {
+          width: 100%; /* Slightly wider image on medium screens */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="content">
+      <header>
+        <h1 class="title animated-border">The Venue</h1>
+      </header>
+      <img
+        src="./static/map.jpg"
+        alt="Virginia and Vincent"
+        class="hero-image"
+      />
+    </main>
+  </body>
+</html>
