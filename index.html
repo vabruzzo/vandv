@@ -12,20 +12,24 @@
       rel="stylesheet"
     />
     <style>
+      html {
+        overflow-x: hidden;
+      }
       body {
         margin: 0;
         padding: 12px;
         background-image: url("./static/bg.jpg");
         background-size: 100% auto;
-        background-repeat: no-repeat;
+        background-repeat: repeat-y;
         background-attachment: scroll;
         background-position: center top;
         background-color: rgb(3, 3, 28);
+        overflow-x: hidden;
       }
       .hero-image {
         display: block;
-        width: 80%;
-        max-width: 1200px;
+        width: 100%;
+        max-width: 1400px;
         margin: 60px auto 60px;
       }
       section {
@@ -35,7 +39,7 @@
         border: 1px solid #999999;
         border-radius: 8px;
         margin: 0 auto;
-        margin-bottom: 200px;
+        margin-bottom: 128px;
         padding: 80px 60px;
         box-sizing: border-box;
       }
@@ -48,6 +52,34 @@
       }
       .center {
         text-align: center;
+      }
+      .title {
+        font-size: 5rem;
+        font-weight: 600;
+        color: rebeccapurple;
+        text-shadow: 0 0 15px rgba(255, 255, 255, 0.7),
+          0 0 30px rgba(255, 255, 255, 0.4);
+        letter-spacing: 3px;
+        position: relative;
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 0;
+        border-radius: 8px;
+        backdrop-filter: blur(3px);
+        background: rgba(255, 255, 255, 0.15);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        animation: glowPulse 4s ease-in-out infinite;
+      }
+      @keyframes glowPulse {
+        0%,
+        100% {
+          text-shadow: 0 0 15px rgba(255, 255, 255, 0.7),
+            0 0 30px rgba(255, 255, 255, 0.4);
+        }
+        50% {
+          text-shadow: 0 0 20px rgba(255, 255, 255, 0.9),
+            0 0 40px rgba(255, 255, 255, 0.6);
+        }
       }
       .animated-border::before {
         content: "";
@@ -71,7 +103,7 @@
         z-index: -1;
         filter: blur(4px);
         opacity: 0.3;
-        animation: smoothGlow 5s ease-in-out infinite;
+        animation: smoothGlow 12s ease-in-out infinite;
         will-change: background-position;
         transform: translateZ(0);
       }
@@ -112,19 +144,23 @@
         font-style: normal;
       }
       header {
-        margin-top: 100px;
+        margin-top: 80px;
         text-align: center;
       }
 
       h1 {
-        font-size: 4rem;
-        font-weight: 600;
-        color: rgb(3, 3, 28);
+        font-size: 5rem;
+        font-weight: 500;
+        color: rebeccapurple;
       }
 
-
-
-  
+      a {
+        color: rebeccapurple;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
 
       h2 {
         font-size: 2.5rem;
@@ -135,16 +171,43 @@
       pre {
         font-size: 1.75rem;
       }
+      /* Media query for screens with max width of 1024px */
+      @media screen and (max-width: 1024px) {
+        /* Add your responsive styles here */
+        .frosted-panel {
+          padding: 40px 16px;
+          margin-bottom: 48px;
+        }
+        h1 {
+          font-size: 2.5rem; /* Smaller heading size */
+        }
+
+        h2 {
+          font-size: 1.5rem; /* Smaller subheading size */
+        }
+        p,
+        pre {
+          font-size: 1.25rem; /* Slightly smaller text */
+        }
+        .hero-image {
+          width: 100%; /* Slightly wider image on medium screens */
+        }
+      }
     </style>
   </head>
   <body>
     <main class="content">
-      <header class="">
-        <h1 class="">V&V’S WEDDING FEST</h1>
+      <header>
+        <h1 class="title animated-border">V&V’S WEDDING FEST</h1>
       </header>
-      <img src="./static/us.png" alt="Virginia and Vincent" class="hero-image">
+      <img
+        src="./static/us.png"
+        alt="Virginia and Vincent"
+        class="hero-image"
+      />
       <section class="frosted-panel">
-        <h2 class="montserrat center">Virginia Wagner & Vincent Abruzzo</h2>
+        <h2 class="montserrat center">VIRGINIA WAGNER & VINCENT ABRUZZO</h2>
+        <h2 class="montserrat center">WEDDING CELEBRATION</h2>
         <div style="margin-top: 20px; margin-bottom: 20px">
           <p class="center">Gilbertsville Farmhouse</p>
           <p class="center">336 Coye Brook Rd, South New Berlin, NY</p>
@@ -153,13 +216,23 @@
         </div>
         <div style="margin-top: 20px; margin-bottom: 20px">
           <p class="center">
-            Music * Swimming * Lawn Games * Farm Animals * Elegant Dining
+            Music • Swimming • Lawn Games • Farm Animals • Elegant Dining
           </p>
-          <p class="center">Bonfires * Late Night Dancing * On-Site Glamping</p>
+          <p class="center">Bonfires • Late Night Dancing • On-Site Glamping</p>
         </div>
         <p class="center">CHOOSE YOUR OWN ADVENTURE</p>
         <p class="center">1. Stay on-site for two days of activities or</p>
         <p class="center">2. Attend Saturday’s celebration</p>
+        <div style="margin-top: 20px; margin-bottom: 20px">
+          <p class="center">MAP</p>
+          <p class="center">Explore the Venue!</p>
+        </div>
+      </section>
+      <section class="frosted-panel">
+        <h2 class="center">RSVP</h2>
+        <div style="margin-top: 20px; margin-bottom: 20px">
+          <p class="center">Please <a href="#">RSVP HERE</a> by June 15</p>
+        </div>
       </section>
       <section class="frosted-panel">
         <div style="margin-bottom: 20px">
@@ -268,21 +341,20 @@
           <p>OFF-SITE</p>
           <p>
             We’ve reserved rooms for guests at a few hotels and guest houses in
-            the area. Please see this Doc for details. Book soon, as there are
-            multiple events in the area that weekend.
+            the area. Please see <a href="#">THIS DOCUMENT</a> for details. Book
+            soon, as there are multiple events in the area that weekend.
           </p>
         </div>
         <div style="margin-top: 20px; margin-bottom: 20px">
           <p>DIRECTIONS</p>
-          <p>Click for directions and airport recommendations.</p>
+          <p>
+            Click for <a href="#">DIRECTIONS</a>. Syracuse (1 hour 30 min) and
+            Albany (1 hour 50 min) are the two closest airports. NYC is 3.5
+            hours without traffic.
+          </p>
         </div>
       </section>
-      <section class="frosted-panel">
-        <h2 class="center">RSVP</h2>
-        <div style="margin-top: 20px; margin-bottom: 20px">
-          <p class="center">Please RSVP HERE by June 15</p>
-        </div>
-      </section>
+
       <section class="frosted-panel">
         <h2 class="center">THANK YOU</h2>
         <div style="margin-top: 20px; margin-bottom: 20px">
@@ -301,59 +373,17 @@
         </div>
         <div style="margin-top: 20px; margin-bottom: 20px">
           <p class="center">
-            If you’d like to send us a card, we’d love to hear from you.
+            If you’d like to mail a card, we’d love to hear from you. For those
+            who would still like to send something, we will have a small
+            registry (coming soon) for our new home and travel fund.
           </p>
-          <p class="center">Virginia Wagner & Vincent Abruzzo</p>
-          <p class="center">150 Stone Jug Road</p>
-          <p class="center">Craryville NY 12521</p>
-        </div>
-        <div style="margin-top: 20px; margin-bottom: 20px">
-          <p class="center">
-            For those who would still like to gift, we will be setting up a
-            small registry (coming soon) for our new home and travel fund.
-          </p>
+          <div style="margin-top: 0.5rem">
+            <p class="center">Virginia Wagner & Vincent Abruzzo</p>
+            <p class="center">19 Har-Mil Drive</p>
+            <p class="center">Nelsonville, NY 10516</p>
+          </div>
         </div>
       </section>
     </main>
   </body>
-  <!-- Add this script at the end of your body tag -->
-  <script>
-    // Function to get background image dimensions and set body height accordingly
-    function setBodyHeightToBackgroundImageHeight() {
-      // Create a new image object
-      const img = new Image();
-
-      // Get the background image URL from the computed style
-      const bgImageUrl = getComputedStyle(document.body).backgroundImage.match(
-        /url\(["']?([^"']*)["']?\)/
-      )[1];
-
-      // Set up an onload handler that fires when the image is loaded
-      img.onload = function () {
-        // Calculate the actual height based on the image dimensions and the body width
-        const bodyWidth = document.body.clientWidth;
-        const imgWidth = this.width;
-        const imgHeight = this.height;
-
-        // Calculate the proportional height based on how the image is being rendered
-        // Since you're using background-size: 100% auto, the image width will match body width
-        const proportionalHeight = (bodyWidth / imgWidth) * imgHeight;
-
-        // Set the body min-height to the calculated height
-        document.body.style.minHeight = `${proportionalHeight}px`;
-        console.log(
-          `Set body height to ${proportionalHeight}px based on background image dimensions ${imgWidth}x${imgHeight}`
-        );
-      };
-
-      // Set the image source to trigger loading
-      img.src = bgImageUrl;
-    }
-
-    // Run the function when page loads
-    window.addEventListener("load", setBodyHeightToBackgroundImageHeight);
-
-    // Also run when window is resized
-    window.addEventListener("resize", setBodyHeightToBackgroundImageHeight);
-  </script>
 </html>
